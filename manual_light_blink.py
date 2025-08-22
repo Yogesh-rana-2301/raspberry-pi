@@ -21,7 +21,7 @@ def start_blinking():
             time.sleep(1)     
     except KeyboardInterrupt:
         print("\nBlinking stopped. Returning to manual mode.")
-        GPIO.output(PIN_SELECTED, GPIO.LOW) k
+        GPIO.output(PIN_SELECTED, GPIO.LOW) 
 
 try:
     print("LED Control Program")
