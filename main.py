@@ -1,13 +1,15 @@
+#use the code in a raspberry pi GPIO compiler
+#https://create.withcode.uk/python/A5
+
+
 import RPi.GPIO as GPIO #type:ignore
 import time
 
-# Set up GPIO mode
+
 GPIO.setmode(GPIO.BCM)
 
-# Define GPIO pin for LED
 PIN_SELECTED = 18
 
-# Set up the LED pin as output
 GPIO.setup(PIN_SELECTED, GPIO.OUT)
 
 try:
@@ -23,6 +25,6 @@ try:
         time.sleep(1)  # Wait for 1 second
 
 except KeyboardInterrupt:
-    # Clean up GPIO on Ctrl+C
+    
     print("\nProgram terminated")
     GPIO.cleanup()
