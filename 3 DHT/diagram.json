@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "YogeshRana",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 116.1,
+      "left": 201.35,
+      "rotate": 270,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -9.3,
+      "left": 196.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    ["dht1:VCC", "pico:3V3", "red", ["v0"]],
+    ["dht1:GND", "pico:GND.8", "black", ["v0"]],
+    ["dht1:SDA", "pico:GP22", "green", ["v0"]]
+  ],
+  "dependencies": {}
+}
